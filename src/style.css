@@ -1,0 +1,101 @@
+.container{
+    text-align: center;
+    background-color: cadetblue;
+    margin: 5%;
+    padding: 20px;
+    min-height: 50vh;
+}
+
+.header{
+    color :#fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.type{
+    width: 50%;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+}
+
+.Add{
+padding: 20px;
+border-radius: 50px;
+border: none;
+margin-left: 5px;
+cursor: pointer;
+}
+
+ul{
+    text-align: center;
+    margin-top: 20px;
+    padding: 0;
+}
+li{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    background-color: rgba(164, 207, 208, 0.342);
+    padding: 20px ;
+    margin: 0 10%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: large;
+}
+
+.list{ 
+    order:1; 
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    color: #fff;
+    min-width: 80%;   
+    max-width: 50%;  
+    }
+
+.list:focus-visible{
+    outline: none;
+}
+.save{ 
+     order: 2;
+    color:rgb(3, 112, 116);
+    font-size: large; }
+.edit{
+     order: 3;  
+     margin-left: auto;
+     color: #fff;
+}
+
+.delete{ 
+    order: 4;
+    color: #fff;
+ }
+
+.btn{
+    padding: 5px;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.321);
+    transition: 1s;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) { 
+    .list{
+      min-width: 70%;   /* minimum size (10 characters) */
+     max-width: 40%;   
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    .list{
+      min-width: 50%;   /* minimum size (10 characters) */
+     max-width: 30%;   
+    }
+}
