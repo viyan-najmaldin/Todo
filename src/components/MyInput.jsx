@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState , useRef } from "react";
 import ListTask from "./ListTask";
 import "../style.css";
+
 function MyInput(){
 
+const myInputRef= useRef();
 const [task ,setTask] = useState ([])
 
 return (
@@ -17,8 +19,8 @@ return (
      e.target.reset();
  }}>
 
- <input className="type" type="text" name="task" placeholder="please write a task" />
- <input type="submit" className="Add" value="Add" />
+ <input className="type" type="text" ref={myInputRef} name="task" placeholder="please write a task" />
+ <input type="submit" onClick={()=> myInputRef.current.focus()} className="Add" value="Add" />
 
  </form>
    <ListTask lists={task}  setList={setTask}  />

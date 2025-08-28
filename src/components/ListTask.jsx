@@ -1,16 +1,26 @@
 import { useState } from "react";
 import "../style.css";
+import SearchItem from "./SearchItem";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash , faCheck} from '@fortawesome/free-solid-svg-icons'
 
 function ListTask ({lists, setList}){
 
    const [vi,setVi] = useState('')
+   const [search,setSearch] = useState('')
    const [idList,setIdList] = useState()
+
+
+   const showed = lists.filter(itemm=>((itemm.toLowerCase().includes(search.toLowerCase()))))
+  
 
     return( 
       <div>
-          <ul> {lists.map((el,i)=>{
+           <SearchItem 
+           search={search}
+           setSearch={setSearch}
+           />
+          <ul> {showed.map((el,i)=>{
             return (
 
             <li key={i}>

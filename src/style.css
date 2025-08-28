@@ -80,6 +80,15 @@ li{
     cursor: pointer;
 }
 
+.search{
+    padding: 5px;
+    margin-top: 10px;
+    border: none;
+    /* border-radius: 10px; */
+    background-color: transparent;
+    border-bottom: 1px solid white ;
+    color: #fff;
+}
 .btn:hover{
     background-color: rgba(0, 0, 0, 0.321);
     transition: 1s;
