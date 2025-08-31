@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import "../style.css";
 import SearchItem from "./SearchItem";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -20,14 +20,13 @@ function ListTask ({lists, setList}){
            search={search}
            setSearch={setSearch}
            />
+          { lists.length? (
           <ul> {showed.map((el,i)=>{
             return (
-
             <li key={i}>
                 {/* Edit button  here */}
                 <input type="submit" className="edit btn" 
-                  onClick={()=>{setVi(true); setIdList(i)}} value="Edit"  />
-
+                  onClick={()=>{setVi(true);  setIdList(i); }} value="Edit"  />
                 {/* If User Press the Edit Button    */}
                 { (vi && idList===i)?  
                 ( <>
@@ -53,7 +52,8 @@ function ListTask ({lists, setList}){
         
             </li>)
           })}  
-         </ul>  
+         </ul> ) 
+         : <p className="empty"> list is empty</p> }
        </div>    
     
     );

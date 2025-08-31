@@ -1,14 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .container{
     text-align: center;
     background-color: cadetblue;
     margin: 5%;
-    padding: 20px;
-    min-height: 50vh;
+    padding: 50px 20px;
+    min-height: 70vh;
+     box-shadow: 1px 1px 5px black ;
+ border-radius: 50px;
 }
 
 .header{
     color :#fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  Helvetica, sans-serif;
+    margin-bottom: 15px;
+     text-shadow: .5px .5px 10px black ;
+    
 }
 
 .type{
@@ -16,6 +26,8 @@
     padding: 20px;
     border: none;
     border-radius: 50px;
+     box-shadow: 1px 1px 5px black ;
+
 }
 
 .Add{
@@ -24,6 +36,8 @@ border-radius: 50px;
 border: none;
 margin-left: 5px;
 cursor: pointer;
+     box-shadow: 1px 1px 5px black ;
+
 }
 
 ul{
@@ -42,6 +56,8 @@ li{
     border-radius: 10px;
     color: #fff;
     font-size: large;
+     box-shadow: .5px .5px 15px rgba(0, 0, 0, 0.452) ;
+
 }
 
 .list{ 
@@ -50,8 +66,8 @@ li{
     background-color: transparent;
     border-bottom: 2px solid white;
     color: #fff;
-    min-width: 80%;   
-    max-width: 50%;  
+     min-width: 80%;   
+   max-width: 50%;  
     }
 
 .list:focus-visible{
@@ -89,6 +105,12 @@ li{
     border-bottom: 1px solid white ;
     color: #fff;
 }
+
+.search::placeholder{
+    color: white;
+    opacity: .4;
+}
+
 .btn:hover{
     background-color: rgba(0, 0, 0, 0.321);
     transition: 1s;
@@ -107,4 +129,17 @@ li{
       min-width: 50%;   /* minimum size (10 characters) */
      max-width: 30%;   
     }
+}
+
+@media screen and (max-width: 400px) { 
+    .list{
+      min-width: 30%;   /* minimum size (10 characters) */
+     max-width: 20%;   
+    }
+}
+
+
+.empty{
+    margin: 10%;
+    color: #fff;
 }
